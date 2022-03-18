@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import Navbar from './Header/Navbar'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+
+
+describe("Todo Test", ()=> {
+    test("render learn react Navbar", () => {
+        render(<Navbar />) ;
+        const linkElement = screen.getByText(/home/i);
+        console.log("home")
+        expect(linkElement).toBeInTheDocument()
+        screen.debug()
+    }) 
+})
